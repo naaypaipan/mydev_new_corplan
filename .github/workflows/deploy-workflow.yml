@@ -17,13 +17,7 @@ jobs:
         uses: docker/build-push-action@v5.0.0
         with:
           push: true
-          tags: paipan/sotus_project:latest
-      - name: Build and push Docker images
-        uses: docker/build-push-action@v5.0.0
-        with:
-          push: true
-          tags: paipan/sotus_project_notify:latest
-          #context: notify
+          tags: paipan/newcore:latest
       - name: SSH To Server
         uses: appleboy/ssh-action@v0.1.2
         with:
@@ -32,7 +26,7 @@ jobs:
           username: root
           password: ${{secrets.SERVER_PASSWORD}}
           script: |-
-            cd /home/worker/sotus_project
+            cd /home/worker/sotusone
             docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_TOKEN}}
             docker-compose pull
             docker-compose up -d
