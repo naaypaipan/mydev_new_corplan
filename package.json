@@ -1,0 +1,35 @@
+{
+  "name": "piyawat_transports",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IARC-Programing/piyawat_transports.git"
+  },
+  "keywords": [],
+  "author": "theethawat <theethawat.s@outlook.co.th>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IARC-Programing/piyawat_transports/issues"
+  },
+  "homepage": "https://github.com/IARC-Programing/piyawat_transports#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.4",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-sourcemaps": "^3.0.0"
+  },
+  "dependencies": {
+    "@mui/x-date-pickers-pro": "^8.4.0",
+    "@radix-ui/react-popover": "^1.1.14",
+    "date-fns": "^4.1.0",
+    "piyawat_transports": "file:",
+    "react-day-picker": "^9.7.0"
+  }
+}

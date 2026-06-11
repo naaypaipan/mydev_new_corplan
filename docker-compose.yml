@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  iarc-monitoring-system:
+    container_name: iarc-monitoring-system
+    image: iarc/iarc-monitoring-system:latest
+    environment:
+      - MONGODB_URI="mongodb://admin:IARCeimhtsj4IARC@db.eappsoft.net:27020,db.eappsoft.net:27021,db.eappsoft.net:27022/iarc_monitoring?authSource=admin&readPreference=primary&ssl=false"
+      - ENTITY_SIZE=50mb
+      - GCS_BUCKET=erp_iarc
+      - GCS_PROJECT_ID=erp-iarc-303708
+      - SECRET=intelligentautomationresearchcenter
+      - PORT=3001
+    ports:
+      - 8804:3001

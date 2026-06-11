@@ -1,0 +1,5 @@
+apps:
+  - script: server.js
+    name: "mpydev_erp_2"
+    env:
+      NODE_ENV: production

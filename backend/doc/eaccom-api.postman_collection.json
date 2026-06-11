@@ -1,0 +1,356 @@
+{
+	"info": {
+		"_postman_id": "4fb50a00-a8c6-49b9-af07-1cb9caa584bd",
+		"name": "eaccom-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RoomType",
+			"item": [
+				{
+					"name": "create RoomType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"DELUX\",\r\n    \"description\": \"Superior Room Description\",\r\n    \"capacity\": {\r\n        \"adult\": 2,\r\n        \"child\": 1,\r\n        \"extra_bed\": 1\r\n    },\r\n    \"images\": [\r\n        {\r\n            \"imageType\": \"roomTypes\",\r\n            \"roomImages\": \"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\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/room-type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"room-type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll RoomType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/room-type/?size=1&page=1&name=DE",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"room-type",
+								""
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "DE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById RoomType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/room-type/60d2db775326154ce0626b0f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"room-type",
+								"60d2db775326154ce0626b0f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RoomSubType",
+			"item": [
+				{
+					"name": "create  roomSubType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"SUPERIOR-ไม่รวมอาหารเช้า\",\r\n    \"type_id\": \"60d2db775326154ce0626b0f\",\r\n    \"beds\": [\r\n        {\r\n            \"bed\": \"60d054bfbc157731fc18451a\",\r\n            \"amount\": 1\r\n        }\r\n    ],\r\n    \"price\": 1200,\r\n    \"facilality\": {\r\n        \"facility\": \"ทดสอบ\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/room-sub-type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"room-sub-type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById RoomSubType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/room-sub-type/60d2ddc6e8cc3843acc103a0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"room-sub-type",
+								"60d2ddc6e8cc3843acc103a0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll RoomSubType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/room-sub-type/?size=1&page=1&name=&typeId=60d2db775326154ce0626b0f&lowestPrice=1201&highestPrice=1300",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"room-sub-type",
+								""
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "typeId",
+									"value": "60d2db775326154ce0626b0f"
+								},
+								{
+									"key": "lowestPrice",
+									"value": "1201"
+								},
+								{
+									"key": "highestPrice",
+									"value": "1300"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Room",
+			"item": [
+				{
+					"name": "create Room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"101\",\r\n    \"type_id\": \"60d2db775326154ce0626b0f\",\r\n    \"sub_type_id\": \"60d2ddc6e8cc3843acc103a0\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/room",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById Room",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/room/od60d2de10e8cc3843acc103a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"room",
+								"od60d2de10e8cc3843acc103a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById Room Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/room/od60d2de10e8cc3843acc103a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"room",
+								"od60d2de10e8cc3843acc103a2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bed",
+			"item": [
+				{
+					"name": "create Bed",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"เตียงคู่\",\r\n    \"avaliable\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/bed",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"bed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "upload",
+			"item": [
+				{
+					"name": "upload image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"originalname\": \"ทดสอบ.jpg\",\r\n    \"mimetype\": \"image/jpeg\",\r\n    \"roomImages\": \"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\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/upload",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

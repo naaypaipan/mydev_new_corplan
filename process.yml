@@ -1,0 +1,5 @@
+apps:
+  - script: server.js
+    name: "monitoring"
+    env:
+      NODE_ENV: production
